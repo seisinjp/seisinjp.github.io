@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEISIN 東京自由行 | SEISIN Tokyo Travel</title>
+<title>SEISIN 东京自由行 | SEISIN Tokyo Travel</title>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,"Microsoft YaHei",sans-serif;}
 html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 
-/* 多层星云黑金流体背景 高级暗调鎏金基底 */
+/* 升级强化黑金流光粒子背景 纯黑深邃基底+多层鎏金柔光 */
 #particleCanvas{
     position:fixed;
     inset:0;
     z-index:-10;
     background:
-        radial-gradient(circle 800px at 10% 5%, rgba(212,175,55,0.10) 0%, transparent 68%),
-        radial-gradient(circle 700px at 90% 90%, rgba(212,175,55,0.05) 0%, transparent 68%),
-        linear-gradient(160deg,#050508,#000000);
+        radial-gradient(circle 900px at 12% 8%, rgba(212,175,55,0.12) 0%, transparent 72%),
+        radial-gradient(circle 750px at 88% 92%, rgba(212,175,55,0.06) 0%, transparent 72%),
+        #000000;
 }
 
 /* 头部品牌 金属渐变立体Logo */
@@ -181,19 +181,19 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 <div id="particleCanvas"></div>
 
 <div class="headerWrap">
-    <div class="mainLogo">SEISIN 东京自由行</div>
-    <div class="subDesc">东京高端接送机 · 私人VIP包车 | Tokyo Airport Transfer & Private Charter ｜24小时全天候｜全程无隐形消费</div>
+    <div class="mainLogo">SEISIN 東京自由行</div>
+    <div class="subDesc">東京高端接送机 · 私人VIP包车 | Tokyo Airport Transfer & Private Charter ｜24小时全天候｜全程无隐形消费</div>
 </div>
 
 <div class="contentBox">
     <h2 class="sectionHead">服务项目 | Services</h2>
     <div class="serviceGrid">
         <div class="luxCard">机场接送<br>Airport Transfer</div>
-        <div class="luxCard">东京都内包车<br>Tokyo City Charter</div>
+        <div class="luxCard">東京都内包车<br>Tokyo City Charter</div>
         <div class="luxCard">富士山包车<br>Mt.Fuji Charter</div>
         <div class="luxCard">镰仓包车<br>Kamakura Charter</div>
         <div class="luxCard">伊豆包车<br>Izu Charter</div>
-        <div class="luxCard">东京↔大阪包车<br>Tokyo ↔ Osaka Charter</div>
+        <div class="luxCard">東京↔大阪包车<br>Tokyo ↔ Osaka Charter</div>
     </div>
 </div>
 
@@ -208,7 +208,7 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 <div class="contentBox">
     <h2 class="sectionHead">预约方式 | Contact Us</h2>
     <div class="contactPanel">
-        <!-- 横向排列三个二维码，每个下方对应名称+账号 -->
+        <!-- 横向排列三个二维码，每个下方对应名称+账号；LINE图片已改为476.jpeg -->
         <div class="qrFlex">
             <div class="qrItem">
                 <img src="IMG_1837.jpeg" alt="微信二维码 WeChat">
@@ -216,7 +216,7 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
                 <div class="qrAccount">OO0OOOOO</div>
             </div>
             <div class="qrItem">
-                <img src="467.jpeg" alt="LINE二维码">
+                <img src="476.jpeg" alt="LINE二维码">
                 <div class="qrName">LINE</div>
                 <div class="qrAccount">11555</div>
             </div>
@@ -228,8 +228,8 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
         </div>
         <!-- 备注文字移至最下方独立一行 -->
         <div class="bottomNote">
-            备注日期+人数+行程，快速精准报价<br>Send your date, guests & route for instant price quote<br>
-            定金预留车位，行程结束结清尾款<br>Deposit to reserve car, balance paid after journey
+            备注：日期+人数+行程 快速精准报价<br>Send your date, guests & route for instant price quote<br>
+            定金预留车 行程结束结清尾款<br>Deposit to reserve car, balance paid after journey
         </div>
     </div>
 </div>
@@ -239,16 +239,16 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 </div>
 
 <script>
-// 高阶细腻星云粒子配置，低速柔和流光，无刺眼闪烁
+// 升级流光粒子参数：粒子数量微调、线条更细腻、流动速度柔和，黑金流光质感更强
 particlesJS("particleCanvas",{
     particles:{
-        number:{value:58,density:{enable:true,value_area:700}},
+        number:{value:65,density:{enable:true,value_area:720}},
         color:{value:"#d4af37"},
         shape:{type:"circle"},
-        opacity:{value:0.38,random:true},
-        size:{value:2.2,random:true},
-        line_linked:{enable:true,distance:160,color:"#d4af37",opacity:0.13,width:0.6},
-        move:{enable:true,speed:0.65,direction:"none",random:true,straight:false,out_mode:"out"}
+        opacity:{value:0.42,random:true},
+        size:{value:2.0,random:true},
+        line_linked:{enable:true,distance:170,color:"#d4af37",opacity:0.11,width:0.5},
+        move:{enable:true,speed:0.58,direction:"none",random:true,straight:false,out_mode:"out"}
     },
     interactivity:{
         detect_on:"canvas",
@@ -258,7 +258,7 @@ particlesJS("particleCanvas",{
             resize:true
         },
         modes:{
-            grab:{distance:150,line_linked:{opacity:0.40}},
+            grab:{distance:160,line_linked:{opacity:0.38}},
             push:{particles_nb:2}
         }
     },
