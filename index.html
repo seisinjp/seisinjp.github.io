@@ -2,270 +2,239 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEISIN Tokyo Private Tour</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>SEISIN 东京自由行 | SEISIN Tokyo Travel</title>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,"Microsoft YaHei",sans-serif;}
+html,body{width:100%;height:100vh;max-height:100vh;overflow:hidden;color:#f2f2f2;}
+
+/* 多层星云黑金流体背景 高级暗调鎏金基底 */
+#particleCanvas{
+    position:fixed;
+    inset:0;
+    z-index:-10;
+    background:
+        radial-gradient(circle 800px at 10% 5%, rgba(212,175,55,0.10) 0%, transparent 68%),
+        radial-gradient(circle 700px at 90% 90%, rgba(212,175,55,0.05) 0%, transparent 68%),
+        linear-gradient(160deg,#050508,#000000);
 }
-body{
-    width: 100vw;
-    min-height: 100vh;
-    background: url("banner.jpg") center / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #d4af37;
-    text-align: center;
-    padding: 20px;
+
+/* 头部品牌 金属渐变立体Logo */
+.headerWrap{
+    text-align:center;
+    padding:14px 3%;
+    border-bottom:1px solid rgba(212,175,55,0.20);
+    background:rgba(0,0,0,0.70);
+    backdrop-filter:blur(14px);
+    box-shadow:0 0 20px rgba(212,175,55,0.12);
 }
-.title-main{
-    font-size: clamp(40px,10vw,72px);
-    font-weight: bold;
+.mainLogo{
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:6px;
+    background:linear-gradient(130deg,#f0d890,#d4af37,#a88428);
+    -webkit-background-clip:text;
+    color:transparent;
+    filter:drop-shadow(0 0 9px rgba(212,175,55,0.38));
 }
-.title-en{
-    font-size: clamp(22px,5vw,36px);
-    margin:10px 0 32px;
+.subDesc{
+    font-size:14px;
+    color:#b0b0b0;
+    margin-top:6px;
+    line-height:1.52;
 }
-.row-cn1{
-    font-size: clamp(17px,3.5vw,24px);
+
+/* 全局内容容器统一约束 */
+.contentBox{
+    width:94%;
+    max-width:1160px;
+    margin:0 auto;
+    padding:7px 0;
 }
-.row-en1{
-    font-size: clamp(14px,3vw,20px);
-    opacity: 0.9;
-    margin-bottom: 30px;
+.sectionHead{
+    text-align:center;
+    font-size:21px;
+    font-weight:600;
+    margin-bottom:10px;
+    background:linear-gradient(90deg,#e8cd78,#d4af37);
+    -webkit-background-clip:text;
+    color:transparent;
+    filter:drop-shadow(0 0 6px rgba(212,175,55,0.30));
 }
-.row-cn2{
-    font-size: clamp(19px,3.8vw,26px);
+.sectionHead::after{
+    content:"";
+    width:85px;
+    height:1px;
+    margin:8px auto 0;
+    display:block;
+    background:linear-gradient(90deg,transparent,#d4af37,transparent);
+    box-shadow:0 0 5px rgba(212,175,55,0.28);
 }
-.row-en2{
-    font-size: clamp(14px,3vw,20px);
-    opacity: 0.9;
-    margin-bottom: 40px;
+
+/* 高级玻璃卡片 立体悬浮动效 */
+.serviceGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(135px,1fr));
+    gap:9px;
 }
-.qr-container{
-    display: flex;
-    gap:26px;
-    flex-wrap: wrap;
-    justify-content: center;
+.luxCard{
+    background:rgba(20,20,30,0.68);
+    border:1px solid rgba(212,175,55,0.12);
+    border-radius:12px;
+    padding:11px 6px;
+    text-align:center;
+    font-size:14px;
+    transition:all 0.4s cubic-bezier(0.18,0.8,0.18,1);
+    backdrop-filter:blur(6px);
 }
-.qr-block img{
-    width: clamp(115px,23vw,175px);
-    border-radius:14px;
-    background:#ffffff;
+.luxCard:hover{
+    border-color:#d4af37;
+    transform:translateY(-5px) scale(1.015);
+    box-shadow:0 0 26px rgba(212,175,55,0.24);
+    background:rgba(24,24,36,0.82);
 }
-.qr-desc{
-    margin-top:12px;
-    font-size: clamp(14px,3vw,19px);
+
+/* 车型双栏居中布局 */
+.carGrid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:11px;
+    max-width:460px;
+    margin:0 auto;
+}
+
+/* 预约鎏金边框高端面板 */
+.contactPanel{
+    background:linear-gradient(148deg,rgba(18,16,28,0.90),rgba(7,7,13,0.90));
+    border:1.4px solid #d4af37;
+    border-radius:12px;
+    padding:16px;
+    text-align:center;
+    margin:13px 0;
+    box-shadow:0 0 28px rgba(212,175,55,0.16);
+    backdrop-filter:blur(10px);
+}
+.contactPanel p{
+    font-size:16px;
+    margin:7px 0;
+}
+.contactPanel strong{
+    color:#d4af37;
+    filter:drop-shadow(0 0 5px rgba(212,175,55,0.28));
+}
+.textNote{
+    color:#a2a2a2;
+    font-size:13px;
+    margin-top:11px;
+    line-height:1.62;
+}
+
+/* 二维码区域精致样式 */
+.qrContainer{
+    text-align:center;
+    padding:10px 0;
+}
+.qrContainer img{
+    width:125px;
+    height:125px;
+    border:3px solid #d4af37;
+    border-radius:12px;
+    box-shadow:0 0 18px rgba(212,175,55,0.22);
+}
+.qrTips{
+    font-size:13px;
+    color:#a0a0a0;
+    margin-top:7px;
+}
+
+/* 页脚低调轻奢 */
+.footerTxt{
+    text-align:center;
+    font-size:11px;
+    color:#505050;
+    padding:7px 0;
+    border-top:1px solid rgba(212,175,55,0.08);
+    background:rgba(0,0,0,0.60);
+    backdrop-filter:blur(6px);
 }
 </style>
 </head>
 <body>
-    <div class="title-main">SEISIN 东京自由行</div>
-    <div class="title-en">SEISIN Tokyo Private Tour</div>
+<!-- 细腻星云粒子动态背景 -->
+<div id="particleCanvas"></div>
 
-    <div class="row-cn1">机场接送｜东京都内包车｜富士山包车｜镰仓包车｜伊豆包车｜东京⇋大阪往返包车</div>
-    <div class="row-en1">Airport pick‑up, Tokyo charter, Mt.Fuji, Kamakura, Izu, Tokyo‑Osaka two‑way service</div>
+<div class="headerWrap">
+    <div class="mainLogo">SEISIN 东京自由行</div>
+    <div class="subDesc">东京高端接送机 · 私人VIP包车 | Tokyo Airport Transfer & Private Charter ｜24小时全天候｜全程无隐形消费</div>
+</div>
 
-    <div class="row-cn2">车型：丰田埃尔法、丰田海狮 高端商务车辆</div>
-    <div class="row-en2">Vehicles: Toyota Alphard, Toyota Hiace luxury vans</div>
-
-    <div class="qr-container">
-        <div class="qr-block">
-            <img src="wechat.png">
-            <div class="qr-desc">微信 WeChat：OO0OOOOO</div>
-        </div>
-        <div class="qr-block">
-            <img src="line.png">
-            <div class="qr-desc">LINE：11555</div>
-        </div>
-        <div class="qr-block">
-            <img src="whatsapp.png">
-            <div class="qr-desc">Whatsapp：09099727888</div>
-        </div>
+<div class="contentBox">
+    <h2 class="sectionHead">服务项目 | Services</h2>
+    <div class="serviceGrid">
+        <div class="luxCard">机场接送<br>Airport Transfer</div>
+        <div class="luxCard">东京都内包车<br>Tokyo City Charter</div>
+        <div class="luxCard">富士山包车<br>Mt.Fuji Charter</div>
+        <div class="luxCard">镰仓包车<br>Kamakura Charter</div>
+        <div class="luxCard">伊豆包车<br>Izu Charter</div>
+        <div class="luxCard">东京↔大阪包车<br>Tokyo ↔ Osaka Charter</div>
     </div>
-</body>
-</html><!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEISIN Tokyo Private Tour</title>
-<style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    width: 100vw;
-    min-height: 100vh;
-    background: url("banner.jpg") center / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #d4af37;
-    text-align: center;
-    padding: 20px;
-}
-.title-main{
-    font-size: clamp(40px,10vw,72px);
-    font-weight: bold;
-}
-.title-en{
-    font-size: clamp(22px,5vw,36px);
-    margin:10px 0 32px;
-}
-.row-cn1{
-    font-size: clamp(17px,3.5vw,24px);
-}
-.row-en1{
-    font-size: clamp(14px,3vw,20px);
-    opacity: 0.9;
-    margin-bottom: 30px;
-}
-.row-cn2{
-    font-size: clamp(19px,3.8vw,26px);
-}
-.row-en2{
-    font-size: clamp(14px,3vw,20px);
-    opacity: 0.9;
-    margin-bottom: 40px;
-}
-.qr-container{
-    display: flex;
-    gap:26px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.qr-block img{
-    width: clamp(115px,23vw,175px);
-    border-radius:14px;
-    background:#ffffff;
-}
-.qr-desc{
-    margin-top:12px;
-    font-size: clamp(14px,3vw,19px);
-}
-</style>
-</head>
-<body>
-    <div class="title-main">SEISIN 东京自由行</div>
-    <div class="title-en">SEISIN Tokyo Private Tour</div>
+</div>
 
-    <div class="row-cn1">机场接送｜东京都内包车｜富士山包车｜镰仓包车｜伊豆包车｜东京⇋大阪往返包车</div>
-    <div class="row-en1">Airport pick‑up, Tokyo charter, Mt.Fuji, Kamakura, Izu, Tokyo‑Osaka two‑way service</div>
-
-    <div class="row-cn2">车型：丰田埃尔法、丰田海狮 高端商务车辆</div>
-    <div class="row-en2">Vehicles: Toyota Alphard, Toyota Hiace luxury vans</div>
-
-    <div class="qr-container">
-        <div class="qr-block">
-            <img src="wechat.png">
-            <div class="qr-desc">微信 WeChat：OO0OOOOO</div>
-        </div>
-        <div class="qr-block">
-            <img src="line.png">
-            <div class="qr-desc">LINE：11555</div>
-        </div>
-        <div class="qr-block">
-            <img src="whatsapp.png">
-            <div class="qr-desc">Whatsapp：09099727888</div>
-        </div>
+<div class="contentBox">
+    <h2 class="sectionHead">车型 | Available Vehicles</h2>
+    <div class="carGrid">
+        <div class="luxCard">丰田埃尔法<br>Toyota Alphard</div>
+        <div class="luxCard">丰田海狮<br>Toyota Hiace</div>
     </div>
-</body>
-</html><!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEISIN Tokyo Private Tour</title>
-<style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    width: 100vw;
-    min-height: 100vh;
-    background: url("banner.jpg") center / cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #d4af37;
-    text-align: center;
-    padding: 20px;
-}
-.title-main{
-    font-size: clamp(40px,10vw,72px);
-    font-weight: bold;
-}
-.title-en{
-    font-size: clamp(22px,5vw,36px);
-    margin:10px 0 32px;
-}
-.row-cn1{
-    font-size: clamp(17px,3.5vw,24px);
-}
-.row-en1{
-    font-size: clamp(14px,3vw,20px);
-    opacity: 0.9;
-    margin-bottom: 30px;
-}
-.row-cn2{
-    font-size: clamp(19px,3.8vw,26px);
-}
-.row-en2{
-    font-size: clamp(14px,3vw,20px);
-    opacity: 0.9;
-    margin-bottom: 40px;
-}
-.qr-container{
-    display: flex;
-    gap:26px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.qr-block img{
-    width: clamp(115px,23vw,175px);
-    border-radius:14px;
-    background:#ffffff;
-}
-.qr-desc{
-    margin-top:12px;
-    font-size: clamp(14px,3vw,19px);
-}
-</style>
-</head>
-<body>
-    <div class="title-main">SEISIN 东京自由行</div>
-    <div class="title-en">SEISIN Tokyo Private Tour</div>
+</div>
 
-    <div class="row-cn1">机场接送｜东京都内包车｜富士山包车｜镰仓包车｜伊豆包车｜东京⇋大阪往返包车</div>
-    <div class="row-en1">Airport pick‑up, Tokyo charter, Mt.Fuji, Kamakura, Izu, Tokyo‑Osaka two‑way service</div>
-
-    <div class="row-cn2">车型：丰田埃尔法、丰田海狮 高端商务车辆</div>
-    <div class="row-en2">Vehicles: Toyota Alphard, Toyota Hiace luxury vans</div>
-
-    <div class="qr-container">
-        <div class="qr-block">
-            <img src="wechat.png">
-            <div class="qr-desc">微信 WeChat：OO0OOOOO</div>
-        </div>
-        <div class="qr-block">
-            <img src="line.png">
-            <div class="qr-desc">LINE：11555</div>
-        </div>
-        <div class="qr-block">
-            <img src="whatsapp.png">
-            <div class="qr-desc">Whatsapp：09099727888</div>
-        </div>
+<div class="contentBox">
+    <h2 class="sectionHead">预约方式 | Contact Us</h2>
+    <div class="contactPanel">
+        <p><strong>微信 WeChat：</strong>OO0OOOOO</p>
+        <p><strong>LINE：</strong>11555</p>
+        <p><strong>WhatsApp：</strong>+8109099727888</p>
+        <p class="textNote">备注日期+人数+行程，快速精准报价<br>Send your date, guests & route for instant price quote</p>
+        <p class="textNote">定金预留车位，行程结束结清尾款<br>Deposit to reserve car, balance paid after journey</p>
     </div>
+</div>
+
+<div class="qrContainer">
+    <img src="" alt="咨询二维码">
+    <div class="qrTips">扫码一键咨询 | Scan QR for Inquiry</div>
+</div>
+
+<div class="footerTxt">
+© 2026 SEISIN Tokyo Travel All Rights Reserved
+</div>
+
+<script>
+// 高阶细腻星云粒子配置，低速柔和流光，无刺眼闪烁
+particlesJS("particleCanvas",{
+    particles:{
+        number:{value:58,density:{enable:true,value_area:700}},
+        color:{value:"#d4af37"},
+        shape:{type:"circle"},
+        opacity:{value:0.38,random:true},
+        size:{value:2.2,random:true},
+        line_linked:{enable:true,distance:160,color:"#d4af37",opacity:0.13,width:0.6},
+        move:{enable:true,speed:0.65,direction:"none",random:true,straight:false,out_mode:"out"}
+    },
+    interactivity:{
+        detect_on:"canvas",
+        events:{
+            onhover:{enable:true,mode:"grab"},
+            onclick:{enable:true,mode:"push"},
+            resize:true
+        },
+        modes:{
+            grab:{distance:150,line_linked:{opacity:0.40}},
+            push:{particles_nb:2}
+        }
+    },
+    retina_detect:true
+})
+</script>
 </body>
 </html>
