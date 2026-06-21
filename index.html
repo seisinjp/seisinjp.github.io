@@ -2,12 +2,12 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>SEISIN 东京自由行 | SEISIN Tokyo Travel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEISIN 東京自由行 | SEISIN Tokyo Travel</title>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,"Microsoft YaHei",sans-serif;}
-html,body{width:100%;height:100vh;max-height:100vh;overflow:hidden;color:#f2f2f2;}
+html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 
 /* 多层星云黑金流体背景 高级暗调鎏金基底 */
 #particleCanvas{
@@ -50,7 +50,7 @@ html,body{width:100%;height:100vh;max-height:100vh;overflow:hidden;color:#f2f2f2
     width:94%;
     max-width:1160px;
     margin:0 auto;
-    padding:7px 0;
+    padding:12px 0;
 }
 .sectionHead{
     text-align:center;
@@ -109,43 +109,58 @@ html,body{width:100%;height:100vh;max-height:100vh;overflow:hidden;color:#f2f2f2
     background:linear-gradient(148deg,rgba(18,16,28,0.90),rgba(7,7,13,0.90));
     border:1.4px solid #d4af37;
     border-radius:12px;
-    padding:16px;
-    text-align:center;
+    padding:18px 16px;
     margin:13px 0;
     box-shadow:0 0 28px rgba(212,175,55,0.16);
     backdrop-filter:blur(10px);
 }
-.contactPanel p{
-    font-size:16px;
-    margin:7px 0;
-}
-.contactPanel strong{
-    color:#d4af37;
-    filter:drop-shadow(0 0 5px rgba(212,175,55,0.28));
-}
-.textNote{
-    color:#a2a2a2;
-    font-size:13px;
-    margin-top:11px;
-    line-height:1.62;
-}
 
-/* 二维码区域精致样式 */
-.qrContainer{
-    text-align:center;
-    padding:10px 0;
+/* 二维码横向一排布局 */
+.qrFlex{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
-.qrContainer img{
-    width:125px;
-    height:125px;
-    border:3px solid #d4af37;
+.qrItem{
+    text-align:center;
+    background:rgba(16,16,24,0.75);
+    border:1px solid rgba(212,175,55,0.15);
     border-radius:12px;
+    padding:14px 10px;
+    min-width:150px;
+    backdrop-filter:blur(5px);
+    transition:0.3s ease;
+}
+.qrItem:hover{
+    border-color:#d4af37;
     box-shadow:0 0 18px rgba(212,175,55,0.22);
 }
-.qrTips{
+.qrItem img{
+    width:110px;
+    height:110px;
+    border:2.5px solid #d4af37;
+    border-radius:10px;
+    box-shadow:0 0 12px rgba(212,175,55,0.18);
+}
+.qrName{
+    margin-top:8px;
+    color:#d4af37;
+    font-size:15px;
+}
+.qrAccount{
+    margin-top:5px;
+    font-size:14px;
+    color:#eee;
+}
+
+/* 底部备注文字单独区块 */
+.bottomNote{
+    margin-top:20px;
+    text-align:center;
+    color:#a2a2a2;
     font-size:13px;
-    color:#a0a0a0;
-    margin-top:7px;
+    line-height:1.62;
 }
 
 /* 页脚低调轻奢 */
@@ -153,10 +168,11 @@ html,body{width:100%;height:100vh;max-height:100vh;overflow:hidden;color:#f2f2f2
     text-align:center;
     font-size:11px;
     color:#505050;
-    padding:7px 0;
+    padding:15px 0;
     border-top:1px solid rgba(212,175,55,0.08);
     background:rgba(0,0,0,0.60);
     backdrop-filter:blur(6px);
+    margin-top:20px;
 }
 </style>
 </head>
@@ -192,17 +208,30 @@ html,body{width:100%;height:100vh;max-height:100vh;overflow:hidden;color:#f2f2f2
 <div class="contentBox">
     <h2 class="sectionHead">预约方式 | Contact Us</h2>
     <div class="contactPanel">
-        <p><strong>微信 WeChat：</strong>OO0OOOOO</p>
-        <p><strong>LINE：</strong>11555</p>
-        <p><strong>WhatsApp：</strong>+8109099727888</p>
-        <p class="textNote">备注日期+人数+行程，快速精准报价<br>Send your date, guests & route for instant price quote</p>
-        <p class="textNote">定金预留车位，行程结束结清尾款<br>Deposit to reserve car, balance paid after journey</p>
+        <!-- 横向排列三个二维码，每个下方对应名称+账号 -->
+        <div class="qrFlex">
+            <div class="qrItem">
+                <img src="IMG_1837.jpeg" alt="微信二维码 WeChat">
+                <div class="qrName">微信 WeChat</div>
+                <div class="qrAccount">OO0OOOOO</div>
+            </div>
+            <div class="qrItem">
+                <img src="467.jpeg" alt="LINE二维码">
+                <div class="qrName">LINE</div>
+                <div class="qrAccount">11555</div>
+            </div>
+            <div class="qrItem">
+                <img src="475.jpeg" alt="WhatsApp二维码">
+                <div class="qrName">WhatsApp</div>
+                <div class="qrAccount">+81 09099727888</div>
+            </div>
+        </div>
+        <!-- 备注文字移至最下方独立一行 -->
+        <div class="bottomNote">
+            备注日期+人数+行程，快速精准报价<br>Send your date, guests & route for instant price quote<br>
+            定金预留车位，行程结束结清尾款<br>Deposit to reserve car, balance paid after journey
+        </div>
     </div>
-</div>
-
-<div class="qrContainer">
-    <img src="" alt="咨询二维码">
-    <div class="qrTips">扫码一键咨询 | Scan QR for Inquiry</div>
 </div>
 
 <div class="footerTxt">
