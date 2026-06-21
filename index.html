@@ -3,188 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SEISIN Tokyo Travel | 东京自由行高端接送包车</title>
+<title>SEISIN Tokyo Private Tour</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif;}
-body{background:#070707;color:#eee;line-height:1.6;}
-
-header{background:#111;padding:25px 5%;text-align:center;border-bottom:1px solid #d4af37;}
-.logo{font-size:34px;color:#d4af37;font-weight:700;letter-spacing:4px;}
-.sub{color:#aaa;margin-top:8px;font-size:15px;}
-
-/* 东京塔夜景首屏 */
-.banner{
-    height:580px;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.88)),
-    url(https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80) center/cover no-repeat;
-    display:flex;align-items:center;justify-content:center;text-align:center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.banner-box{padding:0 5%;}
-.banner h1{font-size:42px;color:#fff;margin-bottom:12px;}
-.banner h1 span{color:#d4af37;}
-.banner p{color:#ddd;font-size:17px;max-width:750px;margin:0 auto;}
-
-.section{padding:60px 5%;max-width:1200px;margin:0 auto;}
-.title{text-align:center;font-size:28px;color:#d4af37;margin-bottom:45px;position:relative;}
-.title::after{content:'';width:80px;height:2px;background:#d4af37;display:block;margin:12px auto;}
-
-/* 服务卡片 */
-.service{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
-.card{background:#141414;border:1px solid #222;border-radius:12px;overflow:hidden;transition:all 0.3s ease;}
-.card:hover{border-color:#d4af37;transform:translateY(-4px);box-shadow:0 0 15px rgba(212,175,55,0.2);}
-.card img{width:100%;height:210px;object-fit:cover;}
-.card-text{padding:22px;}
-.card h3{color:#d4af37;margin-bottom:10px;font-size:20px;}
-
-/* 埃尔法+海狮车型 */
-.car-box{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin-top:20px;}
-.car-item{background:#111;border-radius:10px;overflow:hidden;border:1px solid #222;transition:0.3s;}
-.car-item:hover{border-color:#d4af37;transform:scale(1.02);}
-.car-item img{width:100%;height:230px;object-fit:cover;}
-.car-info{padding:20px;text-align:center;}
-.car-info h4{color:#d4af37;font-size:20px;}
-
-/* 联系模块 */
-.contact{background:#121212;border:1px solid #d4af37;border-radius:12px;padding:40px 25px;text-align:center;}
-.item{margin:16px 0;font-size:19px;}
-.item strong{color:#d4af37;}
-
-.pay{display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:25px;}
-.tag{background:#d4af37;color:#000;padding:11px 28px;border-radius:8px;font-weight:bold;}
-
-footer{background:#0a0a0a;text-align:center;padding:35px;color:#666;margin-top:50px;border-top:1px solid #222;}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background: url("banner.jpg") center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    text-align: center;
+    padding: 20px;
+}
+.title-main{
+    font-size: clamp(40px,10vw,72px);
+    font-weight: bold;
+}
+.title-en{
+    font-size: clamp(22px,5vw,36px);
+    margin:10px 0 32px;
+}
+.row-cn1{
+    font-size: clamp(17px,3.5vw,24px);
+}
+.row-en1{
+    font-size: clamp(14px,3vw,20px);
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+.row-cn2{
+    font-size: clamp(19px,3.8vw,26px);
+}
+.row-en2{
+    font-size: clamp(14px,3vw,20px);
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+.qr-container{
+    display: flex;
+    gap:26px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.qr-block img{
+    width: clamp(115px,23vw,175px);
+    border-radius:14px;
+    background:#ffffff;
+}
+.qr-desc{
+    margin-top:12px;
+    font-size: clamp(14px,3vw,19px);
+}
 </style>
 </head>
 <body>
+    <div class="title-main">SEISIN 东京自由行</div>
+    <div class="title-en">SEISIN Tokyo Private Tour</div>
 
-<header>
-<div class="logo">SEISIN 东京自由行 | SEISIN Tokyo Travel</div>
-<div class="sub">东京全境高端接送机 · 私人VIP包车 | Tokyo Airport Transfer & Private Charter</div>
-</header>
+    <div class="row-cn1">机场接送｜东京都内包车｜富士山包车｜镰仓包车｜伊豆包车｜东京⇋大阪往返包车</div>
+    <div class="row-en1">Airport pick‑up, Tokyo charter, Mt.Fuji, Kamakura, Izu, Tokyo‑Osaka two‑way service</div>
 
-<!-- 首屏东京塔夜景 -->
-<section class="banner">
-<div class="banner-box">
-<h1>东京高端出行 <span>SEISIN</span></h1>
-<h1>Your VIP Travel Partner In Tokyo</h1>
-<p>成田羽田机场接送｜富士山镰仓箱根一日游｜华人中文司机｜24小时全天候｜全程无隐形消费
-<br>Narita & Haneda Airport Pickup, Mount Fuji, Kamakura, Hakone Tour. 24/7 Chinese Driver, No Hidden Fees</p>
-</div>
-</section>
+    <div class="row-cn2">车型：丰田埃尔法、丰田海狮 高端商务车辆</div>
+    <div class="row-en2">Vehicles: Toyota Alphard, Toyota Hiace luxury vans</div>
 
-<!-- 服务项目 -->
-<section class="section">
-<h2 class="title">服务项目 | Our Services</h2>
-<div class="service">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1532298291910-ff131ef0a185?w=800&q=80" alt="机场接送机">
-<div class="card-text">
-<h3>机场接送机 | Airport Transfer</h3>
-<p>成田NRT / 羽田HND接机送机，航班延误免费等候，举牌专属接机
-<br>Free waiting for delayed flights, professional name sign pickup service</p>
-</div>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da22?w=800&q=80" alt="东京市内包车">
-<div class="card-text">
-<h3>东京市内包车 | City Private Tour</h3>
-<p>酒店往返、逛街购物、商务接待、亲子出行，舒适VIP专车随行
-<br>Shopping, hotel transfer, family & business private chartered service</p>
-</div>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1618023070593-807a91f82630?w=800&q=80" alt="周边一日包车">
-<div class="card-text">
-<h3>周边一日包车 | Day Trip Charter</h3>
-<p>富士山、河口湖、镰仓、箱根、日光长途跨城舒适包车
-<br>Mount Fuji, Hakone, Kamakura, Nikko scenic day tour charter</p>
-</div>
-</div>
-</div>
-</section>
+    <div class="qr-container">
+        <div class="qr-block">
+            <img src="wechat.png">
+            <div class="qr-desc">微信 WeChat：OO0OOOOO</div>
+        </div>
+        <div class="qr-block">
+            <img src="line.png">
+            <div class="qr-desc">LINE：11555</div>
+        </div>
+        <div class="qr-block">
+            <img src="whatsapp.png">
+            <div class="qr-desc">Whatsapp：09099727888</div>
+        </div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEISIN Tokyo Private Tour</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background: url("banner.jpg") center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    text-align: center;
+    padding: 20px;
+}
+.title-main{
+    font-size: clamp(40px,10vw,72px);
+    font-weight: bold;
+}
+.title-en{
+    font-size: clamp(22px,5vw,36px);
+    margin:10px 0 32px;
+}
+.row-cn1{
+    font-size: clamp(17px,3.5vw,24px);
+}
+.row-en1{
+    font-size: clamp(14px,3vw,20px);
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+.row-cn2{
+    font-size: clamp(19px,3.8vw,26px);
+}
+.row-en2{
+    font-size: clamp(14px,3vw,20px);
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+.qr-container{
+    display: flex;
+    gap:26px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.qr-block img{
+    width: clamp(115px,23vw,175px);
+    border-radius:14px;
+    background:#ffffff;
+}
+.qr-desc{
+    margin-top:12px;
+    font-size: clamp(14px,3vw,19px);
+}
+</style>
+</head>
+<body>
+    <div class="title-main">SEISIN 东京自由行</div>
+    <div class="title-en">SEISIN Tokyo Private Tour</div>
 
-<!-- 高端车型 埃尔法+海狮 -->
-<section class="section">
-<h2 class="title">高端VIP车型 | VIP Vehicles</h2>
-<div class="car-box">
-<div class="car-item">
-<img src="https://images.unsplash.com/photo-1620908122447-380948251660?w=800&q=80" alt="丰田埃尔法 Alphard">
-<div class="car-info">
-<h4>丰田埃尔法 Toyota Alphard</h4>
-<p>高端7座商务 · 宽敞舒适 · 贵宾尊享出行</p>
-</div>
-</div>
-<div class="car-item">
-<img src="https://images.unsplash.com/photo-1581512798638-89d884052d48?w=800&q=80" alt="丰田海狮 Hiace">
-<div class="car-info">
-<h4>丰田海狮 Toyota Hiace</h4>
-<p>9-13座大型商务 · 家庭团队出游首选</p>
-</div>
-</div>
-</div>
-</section>
+    <div class="row-cn1">机场接送｜东京都内包车｜富士山包车｜镰仓包车｜伊豆包车｜东京⇋大阪往返包车</div>
+    <div class="row-en1">Airport pick‑up, Tokyo charter, Mt.Fuji, Kamakura, Izu, Tokyo‑Osaka two‑way service</div>
 
-<!-- 热门景点：富士山·东京塔·镰仓·箱根 -->
-<section class="section">
-<h2 class="title">热门旅游目的地 | Popular Destinations</h2>
-<div class="service">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="富士山 Mount Fuji">
-<div class="card-text">
-<h3>富士山 Mount Fuji</h3>
-<p>河口湖、忍野八海、富士五湖全景一日包车畅游</p>
-</div>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80" alt="东京塔 Tokyo Tower">
-<div class="card-text">
-<h3>东京塔 Tokyo Tower</h3>
-<p>东京市区打卡、夜景观光、全域景点随心接送</p>
-</div>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1623655961028-8a97e9195070?w=800&q=80" alt="镰仓 Kamakura">
-<div class="card-text">
-<h3>镰仓 Kamakura</h3>
-<p>湘南海岸、灌篮高手打卡、古都风情一日游玩</p>
-</div>
-</div>
-<div class="card">
-<img src="https://images.unsplash.com/photo-1593053272490-e0ed4729a453?w=800&q=80" alt="箱根 Hakone">
-<div class="card-text">
-<h3>箱根 Hakone</h3>
-<p>温泉度假、芦之湖、大涌谷风景舒适包车出行</p>
-</div>
-</div>
-</div>
-</section>
+    <div class="row-cn2">车型：丰田埃尔法、丰田海狮 高端商务车辆</div>
+    <div class="row-en2">Vehicles: Toyota Alphard, Toyota Hiace luxury vans</div>
 
-<!-- 预约联系方式 -->
-<section class="section">
-<h2 class="title">预约联系 | Contact Us</h2>
-<div class="contact">
-<div class="item"><strong>微信 WeChat：</strong>OO0OOOOO</div>
-<div class="item"><strong>WhatsApp：</strong>+81 09099727888</div>
-<div class="item"><strong>LINE：</strong>11555</div>
-<p style="margin-top:22px;color:#aaa">备注日期+人数+行程，快速精准报价
-<br>Send your date, guests & route for instant price quote</p>
-</div>
-</section>
+    <div class="qr-container">
+        <div class="qr-block">
+            <img src="wechat.png">
+            <div class="qr-desc">微信 WeChat：OO0OOOOO</div>
+        </div>
+        <div class="qr-block">
+            <img src="line.png">
+            <div class="qr-desc">LINE：11555</div>
+        </div>
+        <div class="qr-block">
+            <img src="whatsapp.png">
+            <div class="qr-desc">Whatsapp：09099727888</div>
+        </div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEISIN Tokyo Private Tour</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background: url("banner.jpg") center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    text-align: center;
+    padding: 20px;
+}
+.title-main{
+    font-size: clamp(40px,10vw,72px);
+    font-weight: bold;
+}
+.title-en{
+    font-size: clamp(22px,5vw,36px);
+    margin:10px 0 32px;
+}
+.row-cn1{
+    font-size: clamp(17px,3.5vw,24px);
+}
+.row-en1{
+    font-size: clamp(14px,3vw,20px);
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+.row-cn2{
+    font-size: clamp(19px,3.8vw,26px);
+}
+.row-en2{
+    font-size: clamp(14px,3vw,20px);
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+.qr-container{
+    display: flex;
+    gap:26px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.qr-block img{
+    width: clamp(115px,23vw,175px);
+    border-radius:14px;
+    background:#ffffff;
+}
+.qr-desc{
+    margin-top:12px;
+    font-size: clamp(14px,3vw,19px);
+}
+</style>
+</head>
+<body>
+    <div class="title-main">SEISIN 东京自由行</div>
+    <div class="title-en">SEISIN Tokyo Private Tour</div>
 
-<!-- 支付方式 -->
-<section class="section">
-<h2 class="title">支付方式 | Payment Methods</h2>
-<div class="pay">
-<div class="tag">微信支付 WeChat Pay</div>
-<div class="tag">支付宝 Alipay</div>
-</div>
-<p style="text-align:center;margin-top:18px;color:#aaa">定金预留车位，行程结束结清尾款
-<br>Deposit to reserve car, balance paid after journey</p>
-</section>
+    <div class="row-cn1">机场接送｜东京都内包车｜富士山包车｜镰仓包车｜伊豆包车｜东京⇋大阪往返包车</div>
+    <div class="row-en1">Airport pick‑up, Tokyo charter, Mt.Fuji, Kamakura, Izu, Tokyo‑Osaka two‑way service</div>
 
-<footer>
-© 2026 SEISIN Tokyo Travel ｜东京华人正规高端接送包车服务 All Rights Reserved
-</footer>
+    <div class="row-cn2">车型：丰田埃尔法、丰田海狮 高端商务车辆</div>
+    <div class="row-en2">Vehicles: Toyota Alphard, Toyota Hiace luxury vans</div>
 
+    <div class="qr-container">
+        <div class="qr-block">
+            <img src="wechat.png">
+            <div class="qr-desc">微信 WeChat：OO0OOOOO</div>
+        </div>
+        <div class="qr-block">
+            <img src="line.png">
+            <div class="qr-desc">LINE：11555</div>
+        </div>
+        <div class="qr-block">
+            <img src="whatsapp.png">
+            <div class="qr-desc">Whatsapp：09099727888</div>
+        </div>
+    </div>
 </body>
 </html>
