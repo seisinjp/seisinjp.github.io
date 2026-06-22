@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.seisinjp.com/sitemap.xml
