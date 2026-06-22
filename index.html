@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SEISIN東京自由行，东京包车、接送机中文司机服务，埃尔法，海狮包车，富士山、镰仓、伊豆、大阪包车。SEISIN Tokyo‑based private charter, Tokyo car charter, airport pick‑up service, Alphard & Hiace rental, day trips to Mt.Fuji, Kamakura, Izu and Osaka with Chinese‑speaking drivers.">
+<meta name="description" content="SEISIN东京自由行，东京包车、接送机中文司机服务，埃尔法，海狮包车，富士山、镰仓、伊豆、大阪包车。SEISIN Tokyo‑based private charter, Tokyo car charter, airport pick‑up service, Alphard & Hiace rental, day trips to Mt.Fuji, Kamakura, Izu and Osaka with Chinese‑speaking drivers.">
 <meta name="keywords" content="seisin,东京自由行,东京包车,接送机,Tokyo free travel,Tokyo car charter,airport pick‑up,富士山包车,埃尔法包车,Tokyo airport transfer,Japan private driver">
 <meta name="robots" content="index,follow">
 <meta name="google-site-verification" content="hm33GWqyUwFmnSkT_eTP6ga-vKJgShENpNMd7Cus90o" />
-<title>SEISIN 東京自由行｜东京包车｜成田机场｜羽田机场｜接送机 | SEISIN Tokyo Travel Charter</title>
+<title>SEISIN 东京自由行｜旅游｜东京包车｜日本旅行｜私人订制｜羽田机场｜成田机场｜埃尔法 接送机 | Tokyo Travel Charter</title>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,"Microsoft YaHei",sans-serif;color:#d4af37;}
@@ -46,7 +46,6 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
     bottom:14px;
     font-size:14px;
 }
-/* 下移的VIP标语样式 */
 .vipSlogan{
     text-align:center;
     font-size:15px;
@@ -139,7 +138,6 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
     backdrop-filter:blur(6px);
     margin-top:20px;
 }
-/* 右侧悬浮客服弹窗 */
 .qr-fixed-wrap{
     position:fixed;
     right:20px;
@@ -235,7 +233,6 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
         <div class="luxCard">丰田海狮<br>Toyota Hiace</div>
     </div>
 </div>
-<!-- 已下移：VIP标语放在备注框正上方 -->
 <div class="contentBox">
     <div class="vipSlogan">
         東京VIP私人订制 24小时全天候<br>
@@ -249,9 +246,8 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 <div class="footerTxt">
  © 2026 SEISIN Tokyo Travel All Rights Reserved
 </div>
-<!-- 右侧悬浮客服 -->
 <div class="qr-fixed-wrap">
-    <div class="qr-toggle-btn" onclick="document.getElementById('qrbox').style.display='block'">预约客服</div>
+    <div class="qr-toggle-btn" onclick="openBox(event)">预约客服</div>
     <div id="qrbox" class="qr-popup" onclick="event.stopPropagation()">
         <div class="popup-tip">长按扫码添加好友</div>
         <div class="qrFlex">
@@ -271,10 +267,19 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
                 <div>+81 09099727888</div>
             </div>
         </div>
-        <div class="close-btn" onclick="document.getElementById('qrbox').style.display='none'">关闭</div>
+        <div class="close-btn" onclick="closeBox()">关闭</div>
     </div>
 </div>
+
 <script>
+function openBox(e){
+    e.stopPropagation();
+    document.getElementById("qrbox").style.display = "block";
+}
+function closeBox(){
+    document.getElementById("qrbox").style.display = "none";
+}
+
 particlesJS("particleCanvas",{
     particles:{
         number:{value:65,density:{enable:true,value_area:720}},
