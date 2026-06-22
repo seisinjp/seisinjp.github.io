@@ -8,7 +8,7 @@
 <meta name="keywords" content="seisin,东京自由行,东京包车,接送机,Tokyo free travel,Tokyo car charter,airport pick‑up,富士山包车,埃尔法包车,Tokyo airport transfer,Japan private driver">
 <meta name="robots" content="index,follow">
 <meta name="google-site-verification" content="hm33GWqyUwFmnSkT_eTP6ga-vKJgShENpNMd7Cus90o" />
-<title>SEISIN 东京自由行｜旅游｜东京包车｜日本旅行｜私人订制｜羽田机场 接送｜成田机场 接送｜埃尔法 接送机 | Tokyo Travel Charter</title>
+<title>SEISIN 东京自由行｜旅游｜东京包车｜日本旅行｜私人订制｜羽田机场接送｜成田机场接送｜埃尔法 接送机 | Tokyo Travel Charter</title>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,"Microsoft YaHei",sans-serif;color:#d4af37;}
@@ -24,7 +24,8 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 }
 .headerWrap{
     text-align:center;
-    padding:14px 3%;
+    padding:14px 0%;
+    padding‑bottom:22px;
     border-bottom:1px solid rgba(212,175,55,0.20);
     background:rgba(0,0,0,0.70);
     backdrop-filter:blur(14px);
@@ -35,7 +36,8 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 .mainLogo{
     font-size:32px;
     font-weight:700;
-    letter-spacing:6px;
+    letter-spacing:1px;
+    white-space:nowrap;
     background:linear-gradient(130deg,#f0d890,#d4af37,#a88428);
     -webkit-background-clip:text;
     color:transparent;
@@ -44,8 +46,8 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 .webUrl{
     position:absolute;
     right:3%;
-    bottom:14px;
-    font-size:14px;
+    bottom:-4px;
+    font-size:12px;
 }
 .vipSlogan{
     text-align:center;
@@ -271,6 +273,7 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
         <div class="close-btn" onclick="closeBox()">关闭</div>
     </div>
 </div>
+
 <script>
 function openBox(e){
     e.stopPropagation();
@@ -279,6 +282,7 @@ function openBox(e){
 function closeBox(){
     document.getElementById("qrbox").style.display = "none";
 }
+
 particlesJS("particleCanvas",{
     particles:{
         number:{value:65,density:{enable:true,value_area:720}},
