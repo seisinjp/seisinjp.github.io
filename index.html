@@ -3,17 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SEISIN東京自由行提供东京接送机、埃尔法，海狮包车服务，富士山、镰仓、伊豆、大阪包车。SEISIN Tokyo‑based private charter, airport pick‑up, Alphard & Hiace rental, day trips to Mt.Fuji, Kamakura, Izu and Osaka with Chinese‑speaking drivers.">
-<meta name="keywords" content="东京包车,富士山包车,东京接送机,埃尔法包车,Tokyo car charter,Tokyo airport transfer,Mt.Fuji day trip,Japan private driver">
+<meta name="description" content="SEISIN東京自由行，东京包车、接送机中文司机服务，埃尔法，海狮包车，富士山、镰仓、伊豆、大阪包车。SEISIN Tokyo‑based private charter, Tokyo car charter, airport pick‑up service, Alphard & Hiace rental, day trips to Mt.Fuji, Kamakura, Izu and Osaka with Chinese‑speaking drivers.">
+<meta name="keywords" content="seisin,东京自由行,东京包车,接送机,Tokyo free travel,Tokyo car charter,airport pick‑up,富士山包车,埃尔法包车,Tokyo airport transfer,Japan private driver">
 <meta name="robots" content="index,follow">
-    <meta name="google-site-verification" content="hm33GWqyUwFmnSkT_eTP6ga-vKJgShENpNMd7Cus90o" />
-<title>SEISIN 東京自由行 | SEISIN Tokyo Travel</title>
+<meta name="google-site-verification" content="hm33GWqyUwFmnSkT_eTP6ga-vKJgShENpNMd7Cus90o" />
+<title>SEISIN 東京自由行｜东京包车｜接送机 | SEISIN Tokyo Travel Charter</title>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,"Microsoft YaHei",sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,"Microsoft YaHei",sans-serif;color:#d4af37;}
 html,body{width:100%;color:#f2f2f2;min-height:100vh;}
-
-/* 升级强化黑金流光粒子背景 纯黑深邃基底+多层鎏金柔光 */
 #particleCanvas{
     position:fixed;
     inset:0;
@@ -23,8 +21,6 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
         radial-gradient(circle 750px at 88% 92%, rgba(212,175,55,0.06) 0%, transparent 72%),
         #000000;
 }
-
-/* 头部品牌 金属渐变立体Logo */
 .headerWrap{
     text-align:center;
     padding:14px 3%;
@@ -32,6 +28,8 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
     background:rgba(0,0,0,0.70);
     backdrop-filter:blur(14px);
     box-shadow:0 0 20px rgba(212,175,55,0.12);
+    position:relative;
+    width:100%;
 }
 .mainLogo{
     font-size:32px;
@@ -42,14 +40,19 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
     color:transparent;
     filter:drop-shadow(0 0 9px rgba(212,175,55,0.38));
 }
-.subDesc{
+.webUrl{
+    position:absolute;
+    right:3%;
+    bottom:14px;
     font-size:14px;
-    color:#b0b0b0;
-    margin-top:6px;
-    line-height:1.52;
 }
-
-/* 全局内容容器统一约束 */
+/* 下移的VIP标语样式 */
+.vipSlogan{
+    text-align:center;
+    font-size:15px;
+    margin:10px 0;
+    line-height:1.6;
+}
 .contentBox{
     width:94%;
     max-width:1160px;
@@ -75,15 +78,13 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
     background:linear-gradient(90deg,transparent,#d4af37,transparent);
     box-shadow:0 0 5px rgba(212,175,55,0.28);
 }
-
-/* 高级玻璃卡片 立体悬浮动效 */
 .serviceGrid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(135px,1fr));
     gap:9px;
 }
 .luxCard{
-    background:rgba(20,20,30,0.68);
+    background:transparent;
     border:1px solid rgba(212,175,55,0.12);
     border-radius:12px;
     padding:11px 6px;
@@ -98,8 +99,6 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
     box-shadow:0 0 26px rgba(212,175,55,0.24);
     background:rgba(24,24,36,0.82);
 }
-
-/* 车型双栏居中布局 */
 .carGrid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -107,88 +106,117 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
     max-width:460px;
     margin:0 auto;
 }
-
-/* 预约鎏金边框高端面板 */
-.contactPanel{
-    background:linear-gradient(148deg,rgba(18,16,28,0.90),rgba(7,7,13,0.90));
+.infoPanel{
+    background:transparent;
     border:1.4px solid #d4af37;
     border-radius:12px;
     padding:18px 16px;
     margin:13px 0;
     box-shadow:0 0 28px rgba(212,175,55,0.16);
     backdrop-filter:blur(10px);
+    text-align:center;
 }
-
-/* 二维码横向一排布局 */
+.infoText{
+    line-height:1.62;
+    font-size:13px;
+}
+.noteBox{
+    background:transparent;
+    border:1px solid rgba(212,175,55,0.18);
+    border-radius:12px;
+    padding:16px;
+    margin-top:10px;
+    text-align:center;
+    font-size:13px;
+    line-height:1.8;
+}
+.footerTxt{
+    text-align:center;
+    font-size:11px;
+    padding:15px 0;
+    border-top:1px solid rgba(212,175,55,0.08);
+    background:transparent;
+    backdrop-filter:blur(6px);
+    margin-top:20px;
+}
+/* 右侧悬浮客服弹窗 */
+.qr-fixed-wrap{
+    position:fixed;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:999;
+}
+.qr-toggle-btn{
+    background-color:#d4af37;
+    color:#000;
+    padding:14px 14px;
+    border-radius:30px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 18px rgba(212,175,55,0.35);
+    text-align:center;
+}
+.qr-popup{
+    display:none;
+    background:#000000;
+    padding:16px;
+    border-radius:12px;
+    border:1px solid #d4af37;
+    margin-top:12px;
+    box-shadow:0 0 22px rgba(212,175,55,0.25);
+}
 .qrFlex{
     display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-    justify-content:center;
+    flex-direction:column;
+    gap:16px;
 }
 .qrItem{
     text-align:center;
-    background:rgba(16,16,24,0.75);
+    background:transparent;
     border:1px solid rgba(212,175,55,0.15);
     border-radius:12px;
-    padding:14px 10px;
-    min-width:150px;
-    backdrop-filter:blur(5px);
-    transition:0.3s ease;
-}
-.qrItem:hover{
-    border-color:#d4af37;
-    box-shadow:0 0 18px rgba(212,175,55,0.22);
+    padding:10px;
+    min-width:140px;
 }
 .qrItem img{
-    width:110px;
-    height:110px;
+    width:100px;
+    height:100px;
     border:2.5px solid #d4af37;
     border-radius:10px;
     box-shadow:0 0 12px rgba(212,175,55,0.18);
 }
 .qrName{
-    margin-top:8px;
-    color:#d4af37;
-    font-size:15px;
-}
-.qrAccount{
-    margin-top:5px;
+    margin-top:6px;
     font-size:14px;
-    color:#eee;
 }
-
-/* 底部备注文字单独区块 */
-.bottomNote{
-    margin-top:20px;
+.popup-tip{
     text-align:center;
-    color:#a2a2a2;
+    margin:10px 0;
     font-size:13px;
-    line-height:1.62;
 }
-
-/* 页脚低调轻奢 */
-.footerTxt{
+.close-btn{
     text-align:center;
-    font-size:11px;
-    color:#505050;
-    padding:15px 0;
-    border-top:1px solid rgba(212,175,55,0.08);
-    background:rgba(0,0,0,0.60);
-    backdrop-filter:blur(6px);
-    margin-top:20px;
+    margin-top:8px;
+    padding:6px;
+    border:1px solid #d4af37;
+    border-radius:20px;
+    font-size:13px;
+    cursor:pointer;
+}
+@media (min-width:768px){
+    .popup-tip{
+        display:none;
+    }
 }
 </style>
 </head>
 <body>
-<!-- 细腻星云粒子动态背景 -->
 <div id="particleCanvas"></div>
-
 <div class="headerWrap">
     <div class="mainLogo">SEISIN 東京自由行</div>
-    <div class="subDesc">東京高端接送机 · 私人VIP包车 | Tokyo Airport Transfer & Private Charter ｜24小时全天候｜全程无隐形消费</div>
+    <div class="webUrl">www.seisinjp.com</div>
 </div>
-
 <div class="contentBox">
     <h2 class="sectionHead">服务项目 | Services</h2>
     <div class="serviceGrid">
@@ -200,7 +228,6 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
         <div class="luxCard">東京↔大阪包车<br>Tokyo ↔ Osaka Charter</div>
     </div>
 </div>
-
 <div class="contentBox">
     <h2 class="sectionHead">车型 | Available Vehicles</h2>
     <div class="carGrid">
@@ -208,42 +235,46 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
         <div class="luxCard">丰田海狮<br>Toyota Hiace</div>
     </div>
 </div>
-
+<!-- 已下移：VIP标语放在备注框正上方 -->
 <div class="contentBox">
-    <h2 class="sectionHead">预约方式 | Contact Us</h2>
-    <div class="contactPanel">
-        <!-- 横向排列三个二维码，每个下方对应名称+账号；LINE图片已改为476.jpeg -->
-        <div class="qrFlex">
-            <div class="qrItem">
-                <img src="IMG_1837.jpeg" alt="微信二维码 WeChat">
-                <div class="qrName">微信 WeChat</div>
-                <div class="qrAccount">OO0OOOOO</div>
-            </div>
-            <div class="qrItem">
-                <img src="476.jpeg" alt="LINE二维码">
-                <div class="qrName">LINE</div>
-                <div class="qrAccount">11555</div>
-            </div>
-            <div class="qrItem">
-                <img src="475.jpeg" alt="WhatsApp二维码">
-                <div class="qrName">WhatsApp</div>
-                <div class="qrAccount">+81 09099727888</div>
-            </div>
-        </div>
-        <!-- 备注文字移至最下方独立一行 -->
-        <div class="bottomNote">
-            备注：日期+人数+行程 快速精准报价<br>Send your date, guests & route for instant price quote<br>
-            定金预留车 行程结束结清尾款<br>Deposit to reserve car, balance paid after journey
-        </div>
+    <div class="vipSlogan">
+        東京VIP私人订制 24小时全天候<br>
+        Tokyo VIP Custom Service · 24‑Hour Service
+    </div>
+    <div class="noteBox">
+        备注：日期+人数+行程 快速精准报价<br>Send your date, guests & route for instant price quote<br><br>
+        定金预留车 行程结束结清尾款<br>Deposit to reserve car, balance paid after journey
     </div>
 </div>
-
 <div class="footerTxt">
  © 2026 SEISIN Tokyo Travel All Rights Reserved
 </div>
-
+<!-- 右侧悬浮客服 -->
+<div class="qr-fixed-wrap">
+    <div class="qr-toggle-btn" onclick="document.getElementById('qrbox').style.display='block'">预约客服</div>
+    <div id="qrbox" class="qr-popup" onclick="event.stopPropagation()">
+        <div class="popup-tip">长按扫码添加好友</div>
+        <div class="qrFlex">
+            <div class="qrItem">
+                <img src="IMG_1837.jpeg" alt="微信 WeChat">
+                <div class="qrName">微信客服<br>WeChat Service</div>
+                <div>OO0OOOOO</div>
+            </div>
+            <div class="qrItem">
+                <img src="476.jpeg" alt="LINE">
+                <div class="qrName">LINE客服<br>LINE Service</div>
+                <div>11555</div>
+            </div>
+            <div class="qrItem">
+                <img src="475.jpeg" alt="WhatsApp">
+                <div class="qrName">WhatsApp客服<br>WhatsApp Service</div>
+                <div>+81 09099727888</div>
+            </div>
+        </div>
+        <div class="close-btn" onclick="document.getElementById('qrbox').style.display='none'">关闭</div>
+    </div>
+</div>
 <script>
-// 升级流光粒子参数：粒子数量微调、线条更细腻、流动速度柔和，黑金流光质感更强
 particlesJS("particleCanvas",{
     particles:{
         number:{value:65,density:{enable:true,value_area:720}},
@@ -267,6 +298,9 @@ particlesJS("particleCanvas",{
         }
     },
     retina_detect:true
+})
+document.addEventListener('click',function(){
+    document.getElementById('qrbox').style.display='none';
 })
 </script>
 </body>
