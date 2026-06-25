@@ -3,23 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/jpeg" href="https://www.seisinjp.com/482.jpeg">
+<!-- 图标统一指向透明方形logo，完整URL适配爬虫 -->
+<link rel="icon" type="image/png" href="https://www.seisinjp.com/apple-touch-icon.png.PNG">
+<link rel="apple-touch-icon" href="https://www.seisinjp.com/apple-touch-icon.png.PNG">
 <link rel="canonical" href="https://www.seisinjp.com/">
-<meta property="og:site_name" content="SEISIN">
-<meta property="og:title" content="东京包车｜日本接送机｜私人订制旅行">
+
+<!-- 元信息统一：优先突出东京自由行，保留SEISIN品牌，网址规范 -->
+<meta property="og:site_name" content="SEISIN 東京自由行">
+<meta property="og:title" content="東京自由行｜日本包车接送机｜富士山定制旅行">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.seisinjp.com/">
-<meta property="og:image" content="https://www.seisinjp.com/482.jpeg">
-<meta name="description" content="SEISIN 東京旅行，日本接送机、富士山一日游包车。提供成田羽田机场接送机、埃尔法商务旅行、东京周边包车，大阪、京都跨城包车，日本私人定制旅行包车，东京24小时用车服务。SEISIN Tokyo car‑charter service, Japan airport transfer, Mt.Fuji day‑trip charter. Narita‑Haneda airport pick‑up, Alphard business‑trip vehicle, charter around Tokyo, Osaka and Kyoto inter‑city transport, custom‑made Japan travel charter, 24‑hour Tokyo car‑hire service.">
-<meta name="keywords" content="东京包车,日本接送机,富士山一日游包车,成田羽田机场接送机,埃尔法商务旅行,东京周边包车,大阪包车,京都包车,日本私人定制旅行包车,东京24小时用车服务,Tokyo car charter,Japan airport transfer,Mt.Fuji one‑day charter,Narita Haneda airport pick‑up,Alphard business travel,Tokyo surrounding charter,Osaka charter,Kyoto charter,Japan custom private travel charter,24‑hour Tokyo car‑hire service">
+<meta property="og:image" content="https://www.seisinjp.com/apple-touch-icon.png.PNG">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+
+<meta name="description" content="SEISIN东京自由行，提供东京24小时包车、成田羽田机场接送机、埃尔法/海狮商务用车，富士山、镰仓、伊豆、大阪京都跨城私人定制旅行服务。SEISIN Tokyo Travel offers 24h charter, Narita/Haneda airport transfer, Alphard/Hiace business vehicles, custom tours to Mt.Fuji, Kamakura, Izu, Osaka & Kyoto.">
+<meta name="keywords" content="东京自由行,东京包车,日本接送机,富士山一日游,成田羽田接送,埃尔法商务,大阪京都包车,私人定制旅行,Tokyo charter,Japan airport transfer,Mt.Fuji tour,SEISIN">
 <meta name="robots" content="index,follow">
 <meta name="google-site-verification" content="hm33GWqyUwFmnSkT_eTP6ga-vKJgShENpNMd7Cus90o" />
-<title>东京包车｜日本接送机｜私人订制旅行｜富士山一日游｜大阪｜京都｜ 用车服务｜24小时用车服务 | Tokyo Private Charter</title>
+
+<!-- 标题优先展示东京自由行，兼顾SEO -->
+<title>東京自由行｜日本包车接送机｜富士山定制旅行 | SEISIN Tokyo Private Charter</title>
+
+<!-- 结构化数据：WebSite+Organization双规范，logo带尺寸、完整URL -->
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "SEISIN",
+    "name": "東京自由行",
+    "alternateName": ["SEISIN 東京自由行", "SEISIN"],
     "url": "https://www.seisinjp.com"
 }
 </script>
@@ -27,11 +39,18 @@
 {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "SEISIN",
+    "name": "SEISIN 東京自由行",
+    "alternateName": ["東京自由行", "SEISIN"],
     "url": "https://www.seisinjp.com",
-    "logo": "https://www.seisinjp.com/482.jpeg"
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.seisinjp.com/apple-touch-icon.png.PNG",
+        "width": 512,
+        "height": 512
+    }
 }
 </script>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,"Microsoft YaHei",sans-serif;color:#d4af37;}
@@ -47,14 +66,28 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 }
 .headerWrap{
     text-align:center;
-    padding:14px 0%;
-    padding‑bottom:22px;
+    padding:14px 0;
+    padding-bottom:22px;
     border-bottom:1px solid rgba(212,175,55,0.20);
     background:rgba(0,0,0,0.70);
     backdrop-filter:blur(14px);
     box-shadow:0 0 20px rgba(212,175,55,0.12);
     position:relative;
     width:100%;
+}
+/* 左上角透明logo，垂直居中，适配头部 */
+.mainLogoImg{
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 42px;
+    width: 42px;
+    object-fit: contain;
+}
+/* 标题居中容器 */
+.headerCenter{
+    text-align: center;
 }
 .mainLogo{
     font-size:32px;
@@ -238,7 +271,13 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
 <body>
 <div id="particleCanvas"></div>
 <div class="headerWrap">
-    <div class="mainLogo">SEISIN 東京自由行</div>
+    <!-- 左上角透明SEISIN logo，alt标注品牌 -->
+    <img class="mainLogoImg" src="https://www.seisinjp.com/apple-touch-icon.png.PNG" alt="SEISIN 东京自由行品牌标识">
+    <!-- 中间核心名称：東京自由行 -->
+    <div class="headerCenter">
+        <div class="mainLogo">東京自由行</div>
+    </div>
+    <!-- 右下角规范网址 -->
     <div class="webUrl">www.seisinjp.com</div>
 </div>
 <div class="contentBox">
@@ -270,7 +309,7 @@ html,body{width:100%;color:#f2f2f2;min-height:100vh;}
     </div>
 </div>
 <div class="footerTxt">
- © 2026 SEISIN Tokyo Travel All Rights Reserved
+ © 2026 SEISIN Tokyo Travel All Rights Reserved | <a href="https://www.seisinjp.com" style="color:#d4af37;text-decoration:none;">www.seisinjp.com</a>
 </div>
 <div class="qr-fixed-wrap">
     <div class="qr-toggle-btn" onclick="openBox(event)">预约客服</div>
